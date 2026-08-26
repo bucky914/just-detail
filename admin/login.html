@@ -87,28 +87,16 @@
     }
 
     // Confirm this account is actually an admin before letting them in
-    const { data: adminRow, error: adminError } = await supabaseClient
-  .from('admin_users')
-  .select('id')
-  .eq('id', data.user.id)
-  .maybeSingle();
+    const { data: adminRow } = await supabaseClient
+      .from('admin_users').select('id').eq('id', data.user.id).maybeSingle();
 
-if (adminError) {
-  console.error('Admin authorization check failed:', adminError);
-  showAlert('Unable to verify admin access. Please try again.');
-  await supabaseClient.auth.signOut();
-  btn.disabled = false;
-  btn.textContent = 'Log In';
-  return;
-}
-
-if (!adminRow) {
-  showAlert('This account does not have admin access.');
-  await supabaseClient.auth.signOut();
-  btn.disabled = false;
-  btn.textContent = 'Log In';
-  return;
-}
+    if (!adminRow) {
+      showAlert('This account does not have admin access.');
+      await supabaseClient.auth.signOut();
+      btn.disabled = false;
+      btn.textContent = 'Log In';
+      return;
+    }
 
     window.location.href = 'index.html';
   });
