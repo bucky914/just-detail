@@ -1,8 +1,8 @@
 // =========================================================
 // Supabase project configuration
 // =========================================================
-const SUPABASE_URL = 'https://rpaqulrrgzhftmvfjjcg.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJwYXF1bHJyZ3poZnRtdmZqamNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3MzA5MTIsImV4cCI6MjEwMzMwNjkxMn0.zKxPFdpK8YfD7-mHDN0vv9h0DdTQC6aPPUGJcFc5w4s';
+const SUPABASE_URL = 'https://powdsowqehbinjsohyzg.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvd2Rzb3dxZWhiaW5qc29oeXpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc3NTAwODcsImV4cCI6MjEwMzMyNjA4N30.9tZ3g0oilBf6yNlmg0UHXbKexGSIa5OPKj88uS4md80';
 
 // Single shared Supabase client used across the site
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
